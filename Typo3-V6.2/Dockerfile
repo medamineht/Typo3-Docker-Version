@@ -41,6 +41,9 @@ RUN cd /var/www/html && \
     touch FIRST_INSTALL && \
     chown -R www-data. .
 
+RUN cd /var/www/html/typo3conf && \
+    touch ENABLE_INSTALL_TOOL
+    
 # Configure volumes
 VOLUME /var/www/html/fileadmin
 VOLUME /var/www/html/typo3conf
